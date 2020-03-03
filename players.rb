@@ -9,6 +9,8 @@ class Players
   def is_still_alive? 
     if self.lives == 0
       return false
+    else 
+      return true
     end
   end
 end

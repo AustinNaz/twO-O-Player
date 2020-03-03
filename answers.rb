@@ -1,6 +1,6 @@
 class Answers
   def initialize
-    @answers_arr = ['correct', 'wrong', 'you won']
+    @answers_arr = ['That is correct!', 'Thats wrong, awks']
   end
   
   def give_answer? answer_result

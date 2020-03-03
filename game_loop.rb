@@ -29,7 +29,6 @@ class GameLoop
   private
 
   def game_loop
-    # if @@player1.lives || @@player2.lives != 0 
     while !@@has_game_ended
       @@current_question = @@questions.random_question
       puts @@whos_turn_is_it.name + @@current_question[:question]
@@ -47,6 +46,12 @@ class GameLoop
 
       if @@player1.is_still_alive? && @@player2.is_still_alive?
         puts 'newline'
+      else
+        winner = @@player1.is_still_alive? ? @@player1.name : @@player2.name
+        puts winner
+        puts 'Game Over'
+        puts 'Good Bye!'
+        @@has_game_ended = true
       end
 
       if @@whos_turn_is_it == @@player1
