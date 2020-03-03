@@ -1,14 +1,20 @@
-require 'pry'
 require './game_loop'
 require './questions_array'
-# require './questions'
-# require './answers'
-# require './players'
 
-# player = Players.new 'test1', 3
-# answer = Answers.new
-# questions = Questions.new @questions_arr
-GameLoop. new 'test1', 'test2', @questions_arr, 3
-binding.pry
+def play
+  puts "Enter first players name:"
+  player1 = gets.chomp
+  puts "Enter second players name:"
+  player2 = gets.chomp
+  puts "Enter amount of lives to start with:"
+  lives = gets.chomp.to_i
+  while lives == 0
+    puts "Please enter a valid number of lives"
+    lives = gets.chomp.to_i
+  end
+  puts "Have Fun!"
 
-pp @questions_arr
+  GameLoop.new player1, player2, @questions_arr, lives
+end
+
+play
