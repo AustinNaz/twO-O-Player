@@ -1,0 +1,86 @@
+class Players
+The class that the two players will inherit from, can save names, and lives.
+Can also update lives.
+  
+  attr :name, :lives
+  def initialize(name)
+    self.name = name
+    self.lives
+  end
+
+  def is_still_alive? 
+    if self.lives == 0
+      return false
+
+class Questions
+The class that will save the questions the players will have to answer.
+Find a way to randomize questions but also not repeat them.
+
+  questions_arr = [questions...]
+  questions_left = [questionsArr...] ?
+
+  def random_question
+    return a random question
+    pop that question off the questionsLeft array
+  end
+
+class Answers
+Class that will output whether or not the question was answered correctly
+
+  answers_arr = [correct, wrong, you won]
+
+  def give_answer? bool, win status
+    if win status is true
+      return you won 
+
+    if bool is true
+      return correct
+
+    else 
+      return wrong
+      player.lives - 1
+
+class GameLoop
+the primary gameloop that will call the other classes
+has states for if the games still playing, whos turn it is, what turn it is
+
+  @has_game_ended
+  @whos_turn_is_it
+  @current_question
+  @turn
+
+  player1 = Players.new
+  player2 = Players.new
+  questions = Questions.new
+  answers = Answers.new
+
+  def initialize(player1, player2)
+    player1.name = player1
+    player2.name = player2
+    @turn = 1
+    self.game_loop
+  end
+
+  private
+
+  def self.game_loop
+    if player1.lives or player2.lives != 0 
+      if (self.turn = 1)
+        @whos_turn_is_it = player1
+      else 
+        vice versa
+  
+      if (!has_game_ended)
+        current_question = question.random_question
+        puts whos_turn_is_it : current_question
+        puts ARGV
+        if current_question[1] == ARGV[0]
+          puts whos_turn_is_it answers.give_answer true
+          puts player.lives
+        else
+          puts whos_turn_is_it answer.give_answer false
+          put player.lives
+      if player1.is_still_alive && player2.is_still_alive
+        puts newline
+
+  
