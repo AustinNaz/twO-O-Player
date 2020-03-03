@@ -8,7 +8,7 @@ require './questions_array'
 # player = Players.new 'test1', 3
 # answer = Answers.new
 # questions = Questions.new @questions_arr
-GameLoop. new 'test1', 'test2', @questions_arr
+GameLoop. new 'test1', 'test2', @questions_arr, 3
 binding.pry
 
 pp @questions_arr
